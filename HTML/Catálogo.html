@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        /* Menú de navegación */
+        nav {
+            background-color: #008CBA; /* Color de fondo del menú */
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #005f73; /* Color de fondo al pasar el ratón */
+            transform: scale(1.1);
+        }
+
+        /* Menú desplegable (submenú) */
+        nav .menu-item {
+            position: relative;
+        }
+
+        nav .submenu {
+            display: none;
+            position: absolute;
+            background-color: #005f73;
+            min-width: 160px;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .menu-item:hover .submenu {
+            display: block;
+        }
+
+        nav .submenu a {
+            padding: 3px 20px;
+            color: white;
+            font-size: 1rem;
+            text-align: left;
+            border-radius: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        nav .submenu a:hover {
+            background-color: #008CBA;
+        }
+
+        /* Estilos para los productos y la cuadrícula */
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .producto {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+        }
+
+        .producto img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .producto h3 {
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .producto p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .producto .precio {
+            font-size: 1.4rem;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Picasito Reps</h1>
+        <p>Encuentra las mejores camisetas de fútbol.</p>
+    </header>
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="Productos.hmtl">Productos</a>
+        <div class="menu-item">
+            <a href="Categorías.html">Categorías</a>
+            <div class="submenu">
+                <a href="PremierLeague.html">PremierLeague</a>
+                <a href="LaLiga.html">LaLiga</a>
+                <a href="SerieA.html">SerieA</a>
+                <a href="Bundesliga.html">Bundesliga</a>
+                <a href="Ligue1.html">Ligue1</a>
+                <a href="Retro.html">Retro</a>
+                <a href="OtrasLigas.html">OtrasLigas</a>
+                <a href="Selecciones.html">Selecciones</a>
+                <a href="Chándals.html">Chándals</a>
+                <a href="Kits.html">Kits</a>
+            </div>
+        </div>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+
+    <div class="catalogo">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <img src="https://tiendapasionespanola.com/cdn/shop/files/e7409115_800x.jpg?v=1723606380" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>1ª Equipación Real Madrid Temporada 13/14</p>
+            <p class="precio">24.99€</p>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto">
+            <img src="https://camisetasfutbolmania.com/42426-large_default/camiseta-futbol-real-madrid-tercera-equipacion-2024-2025.jpg" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>1ª Equipación Real Madrid Temporada 24/25</p>
+            <p class="precio">19.99€</p>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto">
+            <img src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202405/23/00132435224848____2__1200x1200.jpg" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <p>3ª Equipación Real Madrid Temporada 24/25</p>
+            <p class="precio">19.99€</p>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto">
+            <img src="https://acdn-us.mitiendanube.com/stores/002/550/183/products/camisa-real-madrid-16-17-2-roxa-retro-reserva-cr7-cristiano-ronaldo-champions-league-11-9c647523c4ef21025b16812652193120-640-01-8883368a9cb7a8010816886472978062-1024-10241-0a6fca1c864ba6fd8916926482611314-1024-1024.jpg" alt="Producto 4">
+            <h3>Producto 4</h3>
+            <p>Descripción breve del producto 4. Ideal para todos.</p>
+            <p class="precio">$49.99</p>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="producto">
+            <img src="https://amigosmcs.com/cdn/shop/files/RN1.jpg?v=1702324171&width=1920" alt="Producto 5">
+            <h3>Producto 5</h3>
+            <p>Descripción breve del producto 5. Calidad garantizada.</p>
+            <p class="precio">$59.99</p>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="producto">
+            <img src="https://acdn-us.mitiendanube.com/stores/003/675/491/products/467ab725-46493e2662bc89dd9717290855802208-1024-1024.jpeg" alt="Producto 6">
+            <h3>Producto 6</h3>
+            <p>Descripción breve del producto 6. El mejor del mercado.</p>
+            <p class="precio">$69.99</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Catálogo de Productos | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
